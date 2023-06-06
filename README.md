@@ -33,21 +33,68 @@ pip install -r requirements.txt
 
 ```
 
-4. Run database migrations:
+4. Create a .env file in the project root directory and configure the environment variables:
+
+   ```
+   SECRET_KEY = your_django_secret_key_here
+   ENV_NAME= dev or prod
+   SQL_DATABASE = your_database_name
+   SQL_USER = your_database_user
+   SQL_PASSWORD = your_database_password
+   SQL_HOST = your_database_host
+   SQL_PORT = your_database_port
+   ```
+
+5. Run database migrations:
 
 ```
 python manage.py migrate
 
 ```
 
-5. Start the development server:
+6. Start the development server:
 
 ```
 python manage.py runserver
 
 ```
 
-6. Access the API documentation at http://localhost:8000/swagger/ or http://localhost:8000/redoc/.
+7. Access the API documentation at http://localhost:8000/swagger/ or http://localhost:8000/redoc/.
+
+## Running Tests
+
+To run the tests for the Flight App, execute the following command:
+
+```
+python manage.py test
+
+```
+
+## Test Coverage
+
+To generate a test coverage report, you can use a coverage measurement tool like coverage.py.
+
+1. Install it:
+
+```
+pip install coverage
+
+```
+
+2. Run the tests with coverage:
+
+```
+coverage run manage.py test
+
+
+```
+
+3. Generate the coverage report:
+
+```
+coverage report
+
+```
 
 ## Project Plan
 
