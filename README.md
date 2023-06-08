@@ -37,7 +37,12 @@ pip install -r requirements.txt
 
    ```
    SECRET_KEY = your_django_secret_key_here
-   ENV_NAME= dev or prod
+   ENV_NAME= dev_or_prod
+   ```
+
+   If "prod" then you need also the environment variables below:
+
+   ```
    SQL_DATABASE = your_database_name
    SQL_USER = your_database_user
    SQL_PASSWORD = your_database_password
